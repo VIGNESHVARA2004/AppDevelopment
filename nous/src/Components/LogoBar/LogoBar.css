@@ -1,0 +1,15 @@
+/* LogoBar.css */
+.navbar {
+    background-color:  #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 60px; /* Set the desired height of the navbar */
+  }
+  
+  .center-logo img {
+    width: 120px;
+    max-height: 100%; /* Ensure the image fits within the navbar height */
+  }
+  
