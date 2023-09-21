@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.App{
+  background-color: #f5f5f5;
 }
 
 .App-logo {
@@ -43,6 +43,10 @@
   src: url('SFUIDisplay-Regular.otf');
 }
 @font-face {
+  font-family: 'SF-Pro-Light';
+  src: url('SF-Pro-Display-Light.otf');
+}
+@font-face {
   font-family: 'SF-Bold';
   src: url('SF-Pro-Display-Bold.otf');
 }
@@ -59,3 +63,4 @@
   font-family: 'SF-Semibold';
   src: url('SFUIText-Semibold.otf');
 }
+

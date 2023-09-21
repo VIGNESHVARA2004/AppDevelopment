@@ -1,33 +1,94 @@
-import React from 'react'
-import './Login.css'
+import React, { useState } from 'react';
+import './Login.css';
 import backgroundImage from './login-background.jpg';
 import { useNavigate } from 'react-router-dom';
+import LoadingPage from '../LoadingPage/LoadingPage';
+import { useSelector } from 'react-redux';
 
-export default function Login() {
+function Login() {
   const navigate = useNavigate();
+  const users = useSelector((state) => state.auth.users);
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  console.log(users);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleLogin = () => {
-    navigate('/signup');
+    const {  email, password } = formData;
+
+    const userExists = users.some((user) => user.email === email);
+    const user = users.find((user) => user.email === email);
+    localStorage.setItem("users",JSON.stringify(user));
+    console.log(user);
+    if (user.password !== password) {
+      alert("Invalid password");
+      return; 
+    }
+    if (userExists.password === password) {
+      console.log("Login Successful");
+      return; 
+    }
+    navigate('/');
   };
+
   return (
     <div className="login-page">
-      <div className="login-container">
-        <h2>Login</h2>
-        <form>
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input type="text" id="username" name="username" />
+      <div className='login-main-box'>
+        <div className="login-container">
+          <h1>LOG IN</h1>
+          <div className='login-box'>
+            <div className="login-username-box">
+              <input type="text"
+                name="username"
+                value={formData.username}
+                onChange={handleInputChange}
+                required/>
+              <label>Email</label>
+            </div>
+            <div className="login-password-box">
+              <input type="password" 
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                required/>
+              <label>Password</label>
+            </div>
+            <div className='login-bottom'>
+              <div className='login-inner-bottom-1'>
+                <div className='login-button-box'>
+                  <input type='button' onClick={handleLogin} value='Login' />
+                </div>
+                <div className='login-forgot-pass'>
+                  <p>Forgot Password?</p>
+                </div>
+              </div>
+              <div className='login-inner-bottom-2'>
+                <div className='login-Dont'>
+                  <p>Don't have an account?</p>
+                </div>
+                <div className='login-button-box-reg'>
+                  <input type='button' onClick={() => navigate('/signup')} value='Register Now' />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" />
-          </div>
-          <button onClick={handleLogin} type="submit">Login</button>
-        </form>
+        </div>
       </div>
-      <div className="image-container">
+      <div className="login-image-container">
         <img src={backgroundImage} alt="Login" />
       </div>
-  </div>
-  )
+    </div>
+  );
 }
+
+export default LoadingPage(Login);
