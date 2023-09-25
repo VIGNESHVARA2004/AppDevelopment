@@ -1,0 +1,121 @@
+.shop-outer{
+    height: 180vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.shop-title{
+    display: flex;
+    position: relative;
+    font-family: SF-Bold;
+    border: none;
+    border-bottom: solid 1px black;
+    height: 200px;
+    align-items:end;
+    font-size: 48px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+.shop-items{
+    display: flex;
+    position: relative;
+    border: none;
+    border-bottom: solid 1px black;
+    align-items:center;
+    font-family: SF-Regular;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.shop-product-items{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    height: 1500px;
+}
+
+.shop-product-items-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: auto;
+    gap:20px;
+    display: 500px;
+}
+.shop-product-card{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+}
+
+.shop-product-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.shop-product-card img{
+    width: 293px;
+    height: 360px;
+}
+
+.Brand{
+    font-family: SF-Pro-Light;
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.product-titles{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 10px;
+}
+
+.product-titles p{
+    margin: 0;
+    margin-top: 3px;
+    font-family: SF-Regular;
+}
+
+.price{
+    justify-self: end;
+}
+
+.Page-Bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:40px
+}
+
+.Page-Bar-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+}
+
+.Page-Bar img{
+    width: 25px;
+    height: 25px;
+    color: gray;
+}
+
+.Page-Bar .Pageno{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    border:solid 0.5px gray;
+}
+
+.Page-Bar-buttons:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 10px -15px #111;
+}
+

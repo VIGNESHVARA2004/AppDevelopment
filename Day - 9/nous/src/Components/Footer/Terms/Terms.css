@@ -1,0 +1,32 @@
+.terms-container{
+  display: grid;
+  height: 130vh;
+}
+
+.terms-conditions-container{
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.terms-conditions-container-first h1{
+  font-family: SF-Regular;
+  font-size: 64px;
+}
+
+.terms-feature-box h2{
+  font-family: SF-Regular;
+
+}
+
+.terms-feature-box p{
+  font-family: SF-Pro-Light;
+  color : gray;
+  text-align: justify;
+}
+
+.terms-conditions-container-second{
+  display: grid;
+  gap: 30px;
+}

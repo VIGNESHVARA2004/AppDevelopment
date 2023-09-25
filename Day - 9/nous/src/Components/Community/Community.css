@@ -1,0 +1,84 @@
+.community-page{
+  display: grid;
+  height: 100vh;
+}
+.community-heading{
+  display: flex;
+  flex-wrap:wrap;
+  border: none;
+  position: relative;
+  align-content: end;
+  padding: 40px;
+  border-bottom: 1px solid black;
+  font-family:  SF-Bold;
+  font-size: 64px;
+  height: 180px;
+}
+
+.community-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 40px;
+}
+
+.community-welcome{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.community-welcome h1{
+  font-family: SF-Regular;
+  font-size: 32px;
+}
+
+.community-welcome p{
+  padding: 40px;
+  padding-top: 15px;
+  font-family: SF-Pro-Light;
+  color : gray;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.community-join{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.community-join h2{
+  font-family: SF-Regular;
+  font-size: 32px;
+}
+
+.community-join-box{
+  display: grid;
+  padding: 40px;
+  padding-top: 15px;
+}
+
+.community-feature-box h3{
+  font-family: SF-Regular;
+
+}
+
+.community-feature-box p{
+  font-family: SF-Pro-Light;
+  color: gray;
+  text-align: justify;
+}
+
+.community-join-button{
+  width: 30%;
+  height: 50px;
+  font-size: 18px;
+  background-color: transparent;
+  color: black;
+  border: solid 0.5px black;
+  font-family: 'SF-Semibold';
+}
+
+.community-button-outer{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}

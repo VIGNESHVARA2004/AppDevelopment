@@ -1,0 +1,98 @@
+.product-description{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr;
+}
+
+.productdetail-image-container img{
+    width: 965px;
+    height: 965px;
+}
+
+.product-details{
+    display: grid;
+    height: 300px;
+    padding: 40px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+}
+
+.product-details h2{
+    font-family: SF-Bold;
+    font-size: 24px;
+}
+
+.product-details p {
+    font-family: SF-Pro-Light;
+}
+
+.Product-Name{
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.Product-price{
+    font-family: SF-Regular;
+    font-size: 24px;
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+.Product-desciption h3{
+    font-family: SF-Bold;
+
+}
+.product-button{
+    display: flex;
+    height: 50px;
+    gap: 20px;
+    padding-top: 50px;
+}
+.count{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    border : solid 0.5px black;
+}
+
+.count .left{
+    display: flex;
+    position: relative;
+    border-left: solid 0.5px black;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.count .right{
+    display: flex;
+    position: relative;
+    border-right: solid 0.5px black;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.count img{
+    width: 25px;
+    height: 25px;
+}
+
+.atc{
+    width: 100%;
+    height: 100%;
+}
+
+.atc input{
+    width: 100%;
+  font-size: 18px;
+  height: 50px;
+  background-color: #000;
+  color: white;
+  border: none;
+  font-family: 'SF-Semibold';
+}
