@@ -18,7 +18,7 @@ function Logobar() {
   const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
-    const userFirstName = user?.firstName;
+    const userFirstName = user ? user?.firstName : "MY ACCOUNT";
 
     if (userFirstName) {
       setName(userFirstName); // Set the name to the user's first name if it exists
