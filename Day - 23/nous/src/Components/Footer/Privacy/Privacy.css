@@ -1,0 +1,26 @@
+.privacy-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  height:100vh;
+}
+
+.privacy-title h1{
+  font-family: SF-Regular;
+  font-size: 64px;
+}
+
+.privacy-policy-container{
+  display: grid;
+  gap: 30px;
+  padding: 40px;
+}
+
+.privacy-cards h2{
+  font-family: SF-Regular;
+}
+
+.privacy-cards p{
+  font-family: SF-Pro-Light;
+  text-align: justify;
+}
